@@ -31,6 +31,8 @@ end
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
+gem 'acts_as_indexed'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
@@ -56,10 +58,6 @@ gem 'acts-as-taggable-on'
 gem "paperclip", "~> 3.0"
 
 gem 'leaflet-rails', '>=0.6.4'
-
-gem 'sunspot_rails'
-
-gem 'sunspot_solr'
 
 gem 'devise'
 

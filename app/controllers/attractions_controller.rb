@@ -4,9 +4,7 @@ class AttractionsController < ApplicationController
     		@attractions = Attraction.tagged_with(params[:tag])
     	elsif params[:q]
     		query = params[:q]
-    		@search = Attraction.search do 
-    			keywords query
-    		end
+    		@search = Attraction.with_query(query)
     		@attractions = @search.results
 		else
 			@attractions = Attraction.all
