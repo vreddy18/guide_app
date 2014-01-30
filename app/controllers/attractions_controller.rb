@@ -1,11 +1,12 @@
 class AttractionsController < ApplicationController
+	load_and_authorize_resource
+	before_action :authenticate_user!, except: [:index, :show]
 	def index
 		if params[:tag]
     		@attractions = Attraction.tagged_with(params[:tag])
     	elsif params[:q]
     		query = params[:q]
-    		@search = Attraction.with_query(query)
-    		@attractions = @search.results
+    		@attractions = Attraction.with_query("^#{query}")
 		else
 			@attractions = Attraction.all
 		end
@@ -29,16 +30,12 @@ class AttractionsController < ApplicationController
  	end
 
 	def show
-		@attraction = Attraction.find(params[:id])
 	end
 
 	def edit
-		@attraction = Attraction.find(params[:id])
 	end
 
 	def update
-		@attraction = Attraction.find(params[:id])
-
 		@attraction.update_attributes(attraction_params)
 		redirect_to @attraction
 	end
@@ -58,7 +55,6 @@ class AttractionsController < ApplicationController
 	end
 
 	def destroy
-		@attraction = Attraction.find(params[:id])
 		@attraction.destroy
 		redirect_to attractions_path(@attraction)
 	end

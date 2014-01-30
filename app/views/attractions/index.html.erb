@@ -14,10 +14,11 @@
         </ul>
  
       <!-- End Navigation -->
-
+   
     <div class="column">
  <!-- Nav Sidebar -->
     <!-- This is source ordered to be pulled to the left on larger screens -->
+    <% if user_signed_in? %>
       <div class="large-3 columns ">
       <h5>MY TRIP TO PROVIDENCE</h5>
         <div class="panel">
@@ -31,7 +32,7 @@
          </div>
     
       </div>
- 
+    <% end %>
  
       <!-- Search Bar -->
  
@@ -143,7 +144,11 @@ cellpadding="10">
 <% end %>
 </table>
 
-
+<% @attractions.tagged_with("cheap").each do |attraction| %>
+  <%= link_to attraction.title, attraction_path(attraction) %>
+  <%= attraction.tagline %>
+  <% end %>
+ <% if user_signed_in? %>
   <h3> My Trip to Providence </h3>
 <table>
   <table border="1" 
@@ -174,5 +179,6 @@ cellpadding="10">
   ]
 ) %>
 </div>
+<% end %>
 <% end %>
 </body>
