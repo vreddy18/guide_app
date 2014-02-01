@@ -1,5 +1,4 @@
 class AttractionsController < ApplicationController
-	load_and_authorize_resource
 	before_action :authenticate_user!, except: [:index, :show]
 	def index
 		if params[:tag]
@@ -30,12 +29,15 @@ class AttractionsController < ApplicationController
  	end
 
 	def show
+		@attraction = Attraction.find(params[:id])
 	end
 
 	def edit
+		@attraction = Attraction.find(params[:id])
 	end
 
 	def update
+		@attraction = Attraction.find(params[:id])
 		@attraction.update_attributes(attraction_params)
 		redirect_to @attraction
 	end
