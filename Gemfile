@@ -61,8 +61,6 @@ gem 'leaflet-rails'
 
 gem 'devise'
 
-gem 'cancan'
-
 gem 'foundation-rails'
 
 gem 'foundicons-rails'
