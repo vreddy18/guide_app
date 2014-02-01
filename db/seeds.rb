@@ -6,15 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-attraction_list = [
-	["FLAN Y AJO", 20,   ]
-
-]
 
 
-
-
-
-attraction_list.each do |title, avatar, price, tagline, tags, link, address, latitude, longitude, content|
-	Attraction.find_or_create_by_title(title: title, avatar: avatar, price: price, tagline: tagline, tags: tags, link: link, address: address, latitude: latitude, longitude: longitude, content: content)
-end
+attraction1 = Attraction.new(title: 'CHEZ PASCAL', tagline: 'fine french classics prepared from local ingredients', price: 25, tag_list: 'french, charcuterie, duck, seafood, meat, food, restaurants')
+attraction1.avatar = File.open("/Users/Vishal/Desktop/images.jpg")
+attraction1.save

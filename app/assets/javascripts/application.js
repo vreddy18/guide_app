@@ -14,10 +14,10 @@
 //= require jquery_ujs
 //= require foundation
 //= require turbolinks
-
+//= require leaflet
 //= require_tree .
 
-//= require leaflet
+
 
 
 $(function(){ $(document).foundation(); });

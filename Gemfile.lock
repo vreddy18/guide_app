@@ -194,7 +194,7 @@ DEPENDENCIES
   foundicons-rails
   jbuilder (~> 1.2)
   jquery-rails
-  leaflet-rails (>= 0.6.4)
+  leaflet-rails
   meta_request
   paperclip (~> 3.0)
   pg

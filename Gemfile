@@ -57,7 +57,7 @@ gem 'acts-as-taggable-on'
 
 gem "paperclip", "~> 3.0"
 
-gem 'leaflet-rails', '>=0.6.4'
+gem 'leaflet-rails'
 
 gem 'devise'
 
