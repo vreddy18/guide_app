@@ -53,7 +53,7 @@ gem 'jbuilder', '~> 1.2'
 
 #add fulltext search functionality
 
-gem 'acts-as-taggable-on'
+gem 'acts-as-taggable-on', github: 'shekibobo/acts-as-taggable-on', branch: 'fix-heroku-precompile'
 
 gem "paperclip", "~> 3.0"
 
