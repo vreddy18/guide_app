@@ -2,12 +2,13 @@
 
 .row {
 	  position: relative;
-	  margin-top: 300 px;
 
  }
 
-.thumb {
-  max-height: 200px;
+.thumb img {
+  height: 200px;
+  width: 250px;
+
 }
 
 .user_signed_in {
@@ -62,6 +63,7 @@
 	height: 300px;
 	width: 225px;
 }
+
 
 .fi-plus {
 	position: relative;
