@@ -1,25 +1,14 @@
+<head>
+   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
+ <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
+</head>
 <body>
-  <h1> Welcome to XXX </h1>
-  <h4> your portal to the unexplored </h4>
-
-  <div class="row">
-    <div class="large-12 columns">
- 
-      <!-- Navigation -->
- 
-        <ul class="button-group">
-          <li><a href="#" class="button">Nav Item 1</a></li>
-          <li><a href="#" class="button">Nav Item 2</a></li>
-          <li><a href="#" class="button">Nav Item 3</a></li>
-        </ul>
- 
-      <!-- End Navigation -->
-   
-   <!--  <div class="column"> -->
- <!-- Nav Sidebar -->
-    <!-- This is source ordered to be pulled to the left on larger screens -->
-    <% if user_signed_in? %>
-      <div class="large-3 columns ">
+  <div id = "header">
+    <h1 id = 'title'> welcome to [untitled] </h1>
+    <h4 id = 'slogan'> your portal to the unexplored </h4>
+  </div>
+      <% if user_signed_in? %>
+      <div class="large-2 columns ">
       <h5>MY TRIP TO PROVIDENCE</h5>
         <div class="panel">
           <% current_user.attractions.each do |attraction| %>
@@ -27,37 +16,40 @@
             <%= link_to image_tag(attraction.avatar.url), attraction_path(attraction) %>
             <%= link_to favorite_attraction_path(attraction, type: "remove"), method: :put do%>
                 <i class="fi-minus"></i>
-             <% end %>
+            <% end %>
           <% end %>
          </div>
     
       </div>
     <% end %>
+
+  <div class="row">
+    <div class="large-12 columns">
+   
+   <!--  <div class="column"> -->
+ <!-- Nav Sidebar -->
+    <!-- This is source ordered to be pulled to the left on larger screens -->
+
  
       <!-- Search Bar -->
  
-        <div class="row">
- 
-          <div class="large-12 columns">
-            <div class="radius panel">
- 
+       <div id="searchbar">
+         
             <form>
-              <div class="row collapse">
- 
-                <div class="large-10 small-8 columns">
+            <div id="searchbox">
+                <div class="large-9 small-8 columns">
                   <%=text_field_tag "q", params[:q], placeholder: "Special interests or must-sees?" %>
                 </div>
-                <div class="large-2 small-3 columns">
+                <div class="large-3 small-3 columns">
                   <input type="submit" value="TAKE ME THERE" class="postfix button expand">
                 </div>
- 
-              </div>
-            </form>
- 
+            </div>
+            </form> 
           </div>
-          </div>
+      
+     
  
-        </div>
+       
         <% if @search %>
   <h5> <%= @search.total %> results </h5>
 <% end %>
@@ -73,14 +65,19 @@
           <h3>Header</h3><hr>
         </div>
 
+
         <% @attractions.each do |attraction| %>
           <div class="large-3 small-6 columns">
+            <div id = "thumbnails">
             <div class="panel">
                <h6><%= attraction.tagline %></h6>
+               <div class="thumb">
                  <%= link_to image_tag(attraction.avatar.url), attraction_path(attraction) %>
+               </div>
              <h6><%= attraction.title %></h6>
              <%= link_to favorite_attraction_path(attraction, type: "add"), method: :put do %>
                 <i class="fi-plus"></i>
+              </div>
              <% end %>
             </div>
           </div>
@@ -121,7 +118,9 @@
  
     <!-- </div> -->
   </div>
+</div>
 
+<div id="table">
 <%= link_to "Add a new attraction", new_attraction_path %>
 <br/>
 <br/>
@@ -166,8 +165,9 @@ cellpadding="10">
 </tr>
 <% end %>
 </table>
+</div>
 <% current_user.attractions.each do |attraction| %>
-<div id="map">
+<div id="map" data-cloudmadekey="<%= ENV["04adbf8bbff34eb69d1658aef8974b03"] %>">
   <%= map(:center => {
     :latlng => [41.823550, -71.422132],
     :zoom => 14
@@ -178,7 +178,7 @@ cellpadding="10">
     }
   ]
 ) %>
-</div>
 <% end %>
+</div>
 <% end %>
 </body>

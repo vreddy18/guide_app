@@ -1,10 +1,11 @@
-
+ <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
+ <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
 
 <h1><%= @attraction.title %> </h1>
 <%= image_tag @attraction.avatar.url(:medium) %>
 
-<div id="map">
-	<%= map(:center => {
+<div id="map" style="height: 360px" data-cloudmadekey="<%= ENV["04adbf8bbff34eb69d1658aef8974b03"] %>">
+  <%= map(:center => {
     :latlng => [@attraction.latitude, @attraction.longitude],
     :zoom => 18
   },

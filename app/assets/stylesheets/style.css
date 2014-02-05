@@ -1,1 +1,70 @@
-#map { height: 300px; width: 500px; }
+#map { height: 400px; width: 800px; }
+
+.row {
+	  position: relative;
+	  margin-top: 300 px;
+
+ }
+
+.thumb {
+  max-height: 200px;
+}
+
+.user_signed_in {
+  text-align: right;
+  padding: 5px;
+  font-size: 80%;
+}
+
+#header {
+	margin-top: 50px;
+	width: 600px;
+	height: 170px;
+	background: #44accf;
+}
+
+#title {
+	position: absolute;
+	margin-top: 30px;
+	margin-left: 10px;
+	padding: 5px;
+}
+
+#slogan {
+	position: absolute;
+	margin-top: 90px;
+	padding: 5px;
+	margin-left: 250px;
+}
+
+#searchbar {
+	position: relative;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#searchbox {
+	padding-top: 6px;
+	position: relative;
+	width: 970px;
+	height: 50px;
+	background: #B2D4D4;
+}
+
+
+#table {
+	position: relative;
+
+}
+
+#thumbnails {
+	position: relative;
+	height: 300px;
+	width: 225px;
+}
+
+.fi-plus {
+	position: relative;
+	margin-left: 100px;
+	background: #B2D4D4
+}

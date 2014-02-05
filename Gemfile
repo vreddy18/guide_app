@@ -57,7 +57,9 @@ gem 'acts-as-taggable-on', github: 'shekibobo/acts-as-taggable-on', branch: 'fix
 
 gem "paperclip", "~> 3.0"
 
-gem 'leaflet-rails'
+gem 'leaflet-rails', "~> 0.7.2"
+
+gem 'cloudmade', "~> 0.2.0"
 
 gem 'devise'
 
