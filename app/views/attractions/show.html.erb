@@ -1,8 +1,10 @@
  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
  <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
 
-<h1><%= @attraction.title %> </h1>
-<%= image_tag @attraction.avatar.url(:medium) %>
+<h1 id="show_title"><%= @attraction.title %> </h1>
+
+<h2 id="show_tagline"><%= @attraction.tagline %> </h2>
+<div id="show_image"><%= image_tag @attraction.avatar.url(:medium) %></div>
 
 <div id="map" style="height: 360px" data-cloudmadekey="<%= ENV["04adbf8bbff34eb69d1658aef8974b03"] %>">
   <%= map(:center => {

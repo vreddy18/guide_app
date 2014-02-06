@@ -2,9 +2,13 @@ CityguideApp::Application.routes.draw do
   devise_for :users
    get 'tags/:tag', to: 'attractions#index', as: :tag
   root "home#index"
+  get "attractions/user_favorites" => "attractions#user_favorites" 
   resources :attractions do
     put :favorite, on: :member
   end
+  get "static_pages/about"
+
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -15,3 +15,12 @@ for attraction in $(".attraction")
     marker = L.marker([latitude, longitude]).addTo(map)
     marker.bindPopup("<b>#{title}</b><br>#{address}")
 
+j$ ->
+  $('.removefave').hover (->
+    $('.removefave').show()
+    return
+  ), ->
+    $('.removefave').hide()
+    return
+
+  return

@@ -1,18 +1,17 @@
-#map { height: 400px; width: 800px; }
+#map { height: 400px; width: 600px; margin-top: 300px; margin-left: 100px; margin-bottom: 50px position: absolute; }
 
 .row {
 	  position: relative;
+	  margin-right: 100px;
 
  }
 
 .thumb img {
-  height: 200px;
-  width: 250px;
+	width: 250px;
+	height: 150px;
 }
 
 .thumb {
-  margin-bottom: 10px;
-  margin-top: 10px;
 }
 
 .user_signed_in {
@@ -49,9 +48,9 @@
 }
 
 #searchbox {
-	padding-top: 6px;
+	padding-top: 7px;
 	position: relative;
-	width: 970px;
+	width: 974px;
 	height: 50px;
 	background: #B2D4D4;
 }
@@ -71,6 +70,81 @@
 
 .fi-plus {
 	position: relative;
-	margin-left: 100px;
+	margin-left: 170px;
 	background: #B2D4D4
+}
+
+#my_trip {
+	text-align: center;
+	background-color: #B2D4D4;
+	margin-top: 10px;
+	margin-bottom: -1px;
+}
+
+#favebar img {
+	position: relative;
+	margin-top: -8px;
+}
+
+#fave {
+	width: 160px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-align: center;
+}
+
+.img_overlay {
+	z-index: -1;
+}
+
+.wrap {
+	position: relative;
+	width: 150px;
+	height: 30px;
+	margin-bottom: 5px;
+}
+
+.wrap .removefave {
+  display: none;
+  position: absolute;
+  margin-bottom: 40px;
+  background-color: #fff;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  width: 12em;
+  font-size: 10pt; 
+  text-align: center;
+}
+
+.wrap:hover .removefave {
+	display: block;
+}
+
+#show_title {
+	text-align: center;
+	background-color: #B2D4D4;
+	width: 1200px;
+	position: relative;
+	margin-left: 100px;
+
+}
+
+#show_tagline {
+	text-align: center;
+	padding-top: 60px;
+	background-color: #B2D4D4;
+	height: 225px;
+	width: 600px;
+	float:left;
+	margin-top: 10px;
+	margin-left: 100px;
+}
+
+#show_image {
+	text-align: center;
+	width: 300px;
+	height: 200px;
+	float: left;
+	margin-top: 10px;
 }

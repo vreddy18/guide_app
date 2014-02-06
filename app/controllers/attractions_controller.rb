@@ -56,6 +56,11 @@ class AttractionsController < ApplicationController
 		end
 	end
 
+	def user_favorites
+		@attractions = current_user.attractions
+	end
+
+
 	def destroy
 		@attraction.destroy
 		redirect_to attractions_path(@attraction)

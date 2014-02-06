@@ -8,7 +8,7 @@
 
 Attraction.delete_all
 
-attraction1 = Attraction.new(title: 'CHEZ PASCAL', tagline: 'fine french classics prepared from local ingredients', price: 25, tag_list: 'french, charcuterie, gourmet, duck, food, restaurants', link: 'http://chez-pascal.com/' , address: '960 Hope St, Providence, RI 02906' , latitude: '41.8534242', longitude: '-71.3929166', content: 'YUM')
+attraction1 = Attraction.new(title: 'CHEZ PASCAL', tagline: 'french classics made from local ingredients', price: 25, tag_list: 'french, charcuterie, gourmet, duck, food, restaurants', link: 'http://chez-pascal.com/' , address: '960 Hope St, Providence, RI 02906' , latitude: '41.8534242', longitude: '-71.3929166', content: 'YUM')
 attraction1.avatar = File.open("public/images/chez_pascal.jpg")
 attraction1.save
 
@@ -44,7 +44,7 @@ attraction9 = Attraction.new(title: 'KITCHEN', tagline: 'classic breakfast execu
 attraction9.avatar = File.open("public/images/kitchen.jpg")
 attraction9.save
 
-attraction10 = Attraction.new(title: 'PROVIDENCE PERFORMING ARTS CENTER', tagline: 'first-class productions hosted in a lavish atmosphere', price: 20, tag_list: 'art, performance, orchestra, music, opera', link: 'http://www.ppacri.org/' , address: '220 Weybosset Street Providence, RI 02903' , latitude: '41.8214636', longitude: '-71.4124558', content: 'YUM')
+attraction10 = Attraction.new(title: 'PROVIDENCE PERFORMING ARTS CENTER', tagline: 'first-class productions, lavish atmosphere', price: 20, tag_list: 'art, performance, orchestra, music, opera', link: 'http://www.ppacri.org/' , address: '220 Weybosset Street Providence, RI 02903' , latitude: '41.8214636', longitude: '-71.4124558', content: 'YUM')
 attraction10.avatar = File.open("public/images/ppac.jpg")
 attraction10.save
 
@@ -105,7 +105,7 @@ attraction24.avatar = File.open("public/images/kabob.jpg")
 attraction24.save
 
 attraction25 = Attraction.new(title: 'ABYSSINIA', tagline: 'homestyle ethiopian comfort food', price: 20, tag_list: 'ethiopian, african, food, restaurants, ethnic', link: 'http://abyssinia-restaurant.com/', address: '333 Wickenden St, Providence, RI 02903', latitude: '41.8195244', longitude: '-71.3965738', content: 'YUM')
-attraction25.avatar = File.open("assets/abyssinia.jpg")
+attraction25.avatar = File.open("public/images/abyssinia.jpg")
 attraction25.save
 
 attraction26 = Attraction.new(title: 'NOT JUST SNACKS', tagline: 'authentic homestyle bengali cuisine', price: 20, tag_list: 'indian, bengali, ethnic, food, restaurants', link: 'http://www.letseat.at/NotJustSnacks', address: '833 Hope St, Providence, RI 02906', latitude: '41.8497811', longitude: ' -71.394595', content: 'YUM')
@@ -242,7 +242,7 @@ attraction58.avatar = File.open("public/images/india_point.jpg")
 attraction58.save
 
 attraction59 = Attraction.new(title: 'FOUR SEASONS RESTAURANT', tagline: 'asian fusion done right', price: 20, tag_list: 'thai, vietnamese, cambodian, chinese, southeast asian, ethnic, food, restaurants', link: '', address: '361 Reservoir Ave, Providence, RI 02907', latitude: '41.7881291', longitude: '-71.4317248', content: 'YUM')
-attraction59.avatar = File.open("assets/four_seasons.jpg")
+attraction59.avatar = File.open("public/images/four_seasons.jpg")
 attraction59.save
 
 attraction60 = Attraction.new(title: 'PVD PUDDING POPS', tagline: 'ice-cold dessert served by the sweetest woman alive', price: 20, tag_list: 'desserts, carts, trucks', link: 'http://pvdpops.com/', address: '', latitude: '', longitude: '', content: 'YUM')
