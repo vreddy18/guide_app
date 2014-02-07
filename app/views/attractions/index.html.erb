@@ -166,19 +166,5 @@ cellpadding="10">
 <% end %>
 </table>
 </div>
-<% current_user.attractions.each do |attraction| %>
-<div id="map" data-cloudmadekey="<%= ENV["04adbf8bbff34eb69d1658aef8974b03"] %>">
-  <%= map(:center => {
-    :latlng => [41.823550, -71.422132],
-    :zoom => 14
-  },
-  :markers => [
-    {
-       :latlng => [attraction.latitude, attraction.longitude]
-    }
-  ]
-) %>
-<% end %>
-</div>
 <% end %>
 </body>

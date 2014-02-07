@@ -16,7 +16,7 @@ end
 
 
 attraction1 = Attraction.new(title: 'CHEZ PASCAL', tagline: 'french classics made from local ingredients', price: 25, tag_list: 'french, charcuterie, gourmet, duck, food, restaurants', link: 'http://chez-pascal.com/' , address: '960 Hope St, Providence, RI 02906' , latitude: '41.8534242', longitude: '-71.3929166', content: 'YUM')
-attraction1.avatar = "#{source}/images/chez_pascal.jpg"
+attraction1.avatar = "http://static2.wikia.nocookie.net/__cb20130528204602/althistory/images/3/3d/Abyssinia_map_(Fidem_Pacis).png"
 attraction1.save
 
 attraction2 = Attraction.new(title: 'BROADWAY BISTRO', tagline: 'haute cuisine at hot prices', price: 20, tag_list: 'local, gourmet, food, restaurants, seafood, beef, meat', link: 'http://broadwaybistrori.com/' , address: '205 Broadway, Providence, RI 02903' , latitude: '41.8210305', longitude: '-71.4243836', content: 'YUM')
