@@ -8,7 +8,7 @@
 
 Attraction.delete_all
 
-if Rails.production?
+if Rails.env.production?
 	source = "http://radiant-fortress-1698.herokuapp.com"
 else
 	source = "public"
