@@ -57,6 +57,8 @@ gem 'acts-as-taggable-on', github: 'shekibobo/acts-as-taggable-on', branch: 'fix
 
 gem "paperclip", "~> 3.0"
 
+gem 'aws-sdk'
+
 gem 'leaflet-rails', "~> 0.7.2"
 
 gem 'cloudmade', "~> 0.2.0"
@@ -66,6 +68,8 @@ gem 'devise'
 gem 'foundation-rails'
 
 gem 'foundicons-rails'
+
+gem 'dotenv-rails'
 
 
 group :doc do

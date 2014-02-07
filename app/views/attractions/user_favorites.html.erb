@@ -2,13 +2,13 @@
 
 
 <h3>Food</h3>
-        <div class="row">
+    
  
-          <div class="large-12 show-for-small columns">>
-        </div>
+        
+      
 
         <% current_user.attractions.tagged_with("food").each do |attraction| %>
-          <div class="large-3 small-6 columns">
+        
             <div id = "thumbnails">
             <div class="panel">
                <h6><%= attraction.tagline %></h6>
@@ -21,19 +21,19 @@
               </div>
              <% end %>
             </div>
-          </div>
+        
         <% end %>
  
-        </div>
+  
 
     <h3>Nightlife</h3>
-        <div class="row">
+  
  
-          <div class="large-12 show-for-small columns">
-        </div>
+        
+      
 
         <% current_user.attractions.tagged_with("nightlife").each do |attraction| %>
-          <div class="large-3 small-6 columns">
+        
             <div id = "thumbnails">
             <div class="panel">
                <h6><%= attraction.tagline %></h6>
@@ -46,19 +46,17 @@
               </div>
              <% end %>
             </div>
-          </div>
+      
         <% end %>
  
-        </div>
 
         <h3>Outdoors</h3>
-        <div class="row">
+  
  
-          <div class="large-12 show-for-small columns">
-        </div>
+        
 
         <% current_user.attractions.tagged_with("outdoors").each do |attraction| %>
-          <div class="large-3 small-6 columns">
+        
             <div id = "thumbnails">
             <div class="panel">
                <h6><%= attraction.tagline %></h6>
@@ -71,13 +69,11 @@
               </div>
              <% end %>
             </div>
-          </div>
         <% end %>
  
-        </div>
 
 <% current_user.attractions.each do |attraction| %>
-  <div id="map" data-cloudmadekey="<%= ENV["04adbf8bbff34eb69d1658aef8974b03"] %>">
+  <div id="map" data-cloudmadekey="<%= ENV["CLOUDMADE_KEY"] %>">
   <%= map(:center => {
     :latlng => [41.823550, -71.422132],
     :zoom => 14
