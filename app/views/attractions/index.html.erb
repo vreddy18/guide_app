@@ -147,10 +147,6 @@ cellpadding="10">
 <% end %>
 </table>
 
-<% @attractions.tagged_with("cheap").each do |attraction| %>
-  <%= link_to attraction.title, attraction_path(attraction) %>
-  <%= attraction.tagline %>
-  <% end %>
  <% if user_signed_in? %>
   <h3> My Trip to Providence </h3>
 <table>
