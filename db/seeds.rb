@@ -13,15 +13,15 @@ attraction1.avatar = "https://s3.amazonaws.com/cityguide_app/chez_pascal.jpg"
 attraction1.save
 
 attraction2 = Attraction.new(title: 'BROADWAY BISTRO', tagline: 'haute cuisine at hot prices', price: 20, tag_list: 'local, gourmet, food, restaurants, seafood, beef, meat', link: 'http://broadwaybistrori.com/' , address: '205 Broadway, Providence, RI 02903' , latitude: '41.8210305', longitude: '-71.4243836', content: 'YUM')
-attraction2.avatar = "https://s3.amazonaws.com/broadway_bistro.jpg"
+attraction2.avatar = "https://s3.amazonaws.com/cityguide_app/broadway_bistro.jpg"
 attraction2.save
 
 attraction3 = Attraction.new(title: 'AS220', tagline: 'one stop shop: food, drink, art', price: 20, tag_list: 'art, alcohol, bars, food, restaurants, booze, gourmet, nightlife', link: 'http://www.as220.org/' , address: '95 Empire St., Providence, RI 02903' , latitude: '41.8210881', longitude: '-71.4155243', content: 'YUM')
-attraction3.avatar = "https://s3.amazonaws.com/as220.jpg"
+attraction3.avatar = "https://s3.amazonaws.com/cityguide_app/as220.jpg"
 attraction3.save
 
 attraction4 = Attraction.new(title: 'LOS ANDES', tagline: 'big portions, big flavor', price: 20, tag_list: 'peruvian, steakhouses, latino, food, restaurant', link: 'http://www.losandesri.com/' , address: '903 Chalkstone Ave, Providence, RI 02908' , latitude: '41.833089', longitude: '-71.4373521', content: 'YUM')
-attraction4.avatar = "https://s3.amazonaws.com/los_andes.jpg"
+attraction4.avatar = "https://s3.amazonaws.com/cityguide_app/los_andes.jpg"
 attraction4.save
 
 attraction5 = Attraction.new(title: 'EAST SIDE POCKETS', tagline: 'healthy fast food at its finest', price: 20, tag_list: 'healthy, cheap, food, restaurants, middle, eastern, meditteranean, falafel, lamb, beef, kabob, gyros', link: 'http://www.eastsidepocket.com/' , address: '278 Thayer St, Providence, RI 02906' , latitude: '41.829523', longitude: '-71.4008774', content: 'YUM')
