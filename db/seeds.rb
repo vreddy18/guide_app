@@ -65,7 +65,7 @@ attraction14.avatar = "https://s3.amazonaws.com/cityguide_app/blackstone.jpg"
 attraction14.save
 
 attraction15 = Attraction.new(title: 'AL FORNO', tagline: '5-star italian fare made from garden fresh produce', price: 20, tag_list: 'italian, local, pasta, food, restaurants', link: 'http://www.alforno.com/' , address: '577 S Main St, Providence, RI 02903' , latitude: '41.8171352', longitude: '-71.4003389', content: 'YUM')
-attraction15.avatar = "https://s3.amazonaws.com/al_forno.jpg"
+attraction15.avatar = "https://s3.amazonaws.com/cityguide_app/al_forno.jpg"
 attraction15.save
 
 attraction16 = Attraction.new(title: 'FARMSTEAD', tagline: 'wine, cheese, and fine fare in a casual bistro setting', price: 20, tag_list: 'american, local, cheese, food, restaurants,', link: 'http://www.farmsteadinc.com/' , address: '186 Wayland Ave, Providence, RI 02906' , latitude: '41.8284843', longitude: '-71.3884849', content: 'YUM')
