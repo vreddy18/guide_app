@@ -1,5 +1,5 @@
 #map { height: 400px; width: 600px; margin-top: 300px; margin-left: 100px; margin-bottom: 50px; position: absolute; }
-#map_show { height: 400px; width: 600px; position: absolute; top: 58%; z-index: -1; border-left-style: solid;
+#map_show { height: 400px; width: 600px; position: absolute; top: 56%; z-index: -1; border-left-style: solid;
 	border-left-color: black;  }
 .row {
 	  position: relative;
@@ -213,7 +213,7 @@
 
 #info {
 	position: absolute;
-	top: 258%;
+	top: 273%;
 	right: 8%;
 	background-color: AliceBlue;
 	height: 400px;
@@ -230,7 +230,7 @@
 	width: 255px;
 	height: 217px;
 	position: absolute;
-	top: 167px;
+	top: 154px;
 	left: 1046px;
 	border-top-color: black;
 	border-top-style: solid;
