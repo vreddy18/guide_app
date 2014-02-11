@@ -1,14 +1,11 @@
-<h1>My Trip to Providence </h1>
+<h1 id="favorites_head">My Trip to Providence </h1>
 
 
-<h3>Food</h3>
-    
- 
-        
-      
-
+<h3 class="category_name">Food</h3>
+<div class="category_wrap">
+ <div class="row">
         <% current_user.attractions.tagged_with("food").each do |attraction| %>
-        
+        <div class="large-4 small-6 columns">
             <div id = "thumbnails">
             <div class="panel">
                <h6><%= attraction.tagline %></h6>
@@ -21,68 +18,79 @@
               </div>
              <% end %>
             </div>
-        
+        </div>
         <% end %>
- 
-  
-
-    <h3>Nightlife</h3>
-  
- 
-        
-      
-
-        <% current_user.attractions.tagged_with("nightlife").each do |attraction| %>
-        
-            <div id = "thumbnails">
-            <div class="panel">
-               <h6><%= attraction.tagline %></h6>
-               <div class="thumb">
-                 <%= link_to image_tag(attraction.avatar.url), attraction_path(attraction) %>
-               </div>
-             <h6><%= attraction.title %></h6>
-             <%= link_to favorite_attraction_path(attraction, type: "remove"), method: :put do %>
-                <i class="fi-minus"></i>
-              </div>
-             <% end %>
-            </div>
-      
-        <% end %>
- 
-
-        <h3>Outdoors</h3>
-  
- 
-        
-
-        <% current_user.attractions.tagged_with("outdoors").each do |attraction| %>
-        
-            <div id = "thumbnails">
-            <div class="panel">
-               <h6><%= attraction.tagline %></h6>
-               <div class="thumb">
-                 <%= link_to image_tag(attraction.avatar.url), attraction_path(attraction) %>
-               </div>
-             <h6><%= attraction.title %></h6>
-             <%= link_to favorite_attraction_path(attraction, type: "remove"), method: :put do %>
-                <i class="fi-minus"></i>
-              </div>
-             <% end %>
-            </div>
-        <% end %>
- 
-
-<% current_user.attractions.each do |attraction| %>
-  <div id="map" data-cloudmadekey="<%= ENV["CLOUDMADE_KEY"] %>">
-  <%= map(:center => {
-    :latlng => [41.823550, -71.422132],
-    :zoom => 14
-  },
-  :markers => [
-    {
-       :latlng => [attraction.latitude, attraction.longitude]
-    }
-  ]
-) %>
-<% end %>
 </div>
+</div>
+
+    <h3 class="category_name">Nightlife</h3>
+  
+ 
+        
+      
+<div class="category_wrap">
+ <div class="row">
+        <% current_user.attractions.tagged_with("nightlife").each do |attraction| %>
+<div class="large-4 small-6 columns">
+            <div id = "thumbnails">
+            <div class="panel">
+               <h6><%= attraction.tagline %></h6>
+               <div class="thumb">
+                 <%= link_to image_tag(attraction.avatar.url), attraction_path(attraction) %>
+               </div>
+             <h6><%= attraction.title %></h6>
+             <%= link_to favorite_attraction_path(attraction, type: "remove"), method: :put do %>
+                <i class="fi-minus"></i>
+              </div>
+             <% end %>
+            </div>
+      </div>
+        <% end %>
+ </div>
+ </div>
+
+ <h3 class="category_name">Art + Culture</h3>
+<div class="category_wrap">
+ <div class="row">
+        <% current_user.attractions.tagged_with("art").each do |attraction| %>
+        <div class="large-4 small-6 columns">
+            <div id = "thumbnails">
+            <div class="panel">
+               <h6><%= attraction.tagline %></h6>
+               <div class="thumb">
+                 <%= link_to image_tag(attraction.avatar.url), attraction_path(attraction) %>
+               </div>
+             <h6><%= attraction.title %></h6>
+             <%= link_to favorite_attraction_path(attraction, type: "remove"), method: :put do %>
+                <i class="fi-minus"></i>
+              </div>
+             <% end %>
+            </div>
+        </div>
+        <% end %>
+</div>
+</div>
+
+        <h3 class="category_name">Outdoors</h3>
+        
+<div class="category_wrap">
+ <div class="row">
+        <% current_user.attractions.tagged_with("outdoors").each do |attraction| %>
+<div class="large-4 small-6 columns">
+            <div id = "thumbnails">
+            <div class="panel">
+               <h6><%= attraction.tagline %></h6>
+               <div class="thumb">
+                 <%= link_to image_tag(attraction.avatar.url), attraction_path(attraction) %>
+               </div>
+             <h6><%= attraction.title %></h6>
+             <%= link_to favorite_attraction_path(attraction, type: "remove"), method: :put do %>
+                <i class="fi-minus"></i>
+              </div>
+             <% end %>
+            </div>
+      </div>
+        <% end %>
+ </div>
+ </div>
+ 

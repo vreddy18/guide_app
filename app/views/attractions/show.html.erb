@@ -6,10 +6,10 @@
 <h2 id="show_tagline"><%= @attraction.tagline %> </h2>
 <div id="show_image"><%= image_tag @attraction.avatar.url(:medium) %></div>
 
-<div id="map" style="height: 360px" data-cloudmadekey="<%= ENV["04adbf8bbff34eb69d1658aef8974b03"] %>">
+<div id="map_show" style="height: 360px" data-cloudmadekey="<%= ENV["04adbf8bbff34eb69d1658aef8974b03"] %>">
   <%= map(:center => {
     :latlng => [@attraction.latitude, @attraction.longitude],
-    :zoom => 18
+    :zoom => 15
   },
   :markers => [
     {
@@ -19,17 +19,17 @@
   ]
 ) %>
 </div>
-
+<div id="info">
 <p> <b>Price: </b> $ <%= @attraction.price %> </p>
 <p> <b>Address: </b> <%= @attraction.address %> </p>
 <p> <b>Website: </b> <%= @attraction.link %> </p>
 <p> <b>Tags: </b> <%= raw @attraction.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %> </p>
 <h2> About </h2> <p> <%= @attraction.content %> </p>
-
- <%= link_to "Add to Trip",   favorite_attraction_path(@attraction, type: "add"), method: :put %> |
- <%= link_to "Remove from Trip", favorite_attraction_path(@attraction, type: "remove"), method: :put %>
-<br/>
-<br/>
-<%= link_to "Back", attractions_path %> |
-<%= link_to "Edit", edit_attraction_path %> |
-<%= link_to "Destroy", attraction_path(@attraction), method: :delete, data: {confirm: "Are you sure?"} %>
+</div>
+<div id="add">
+<h6 id="addtrip"><%= link_to "ADD TO TRIP", favorite_attraction_path(@attraction, type: "add"), method: :put %></h6>
+</div>
+<!--  <%= link_to "Remove from Trip", favorite_attraction_path(@attraction, type: "remove"), method: :put %> -->
+<!-- # <%= link_to "Back", attractions_path %> -->
+<!-- # <%= link_to "Edit", edit_attraction_path %> |
+# # <%= link_to "Destroy", attraction_path(@attraction), method: :delete, data: {confirm: "Are you sure?"} %> --> 

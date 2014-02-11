@@ -12,6 +12,19 @@
   </head>
 
   <body>
+<nav class="top-bar">
+  <ul>
+    <li class="name"><h1><%= link_to "About", {:controller => 'static_pages', :action => 'about'} %></h1></li>
+  
+  </ul>
+</nav>
+
+<!-- Positioning the Top Bar -->
+<div class="fixed contain-to-grid">
+  <!-- <nav> goes here -->
+</div>
+
+
     <div class = "user_signed_in">
   	<% if user_signed_in? %>
 		You are signed in as <%= current_user.email %> |

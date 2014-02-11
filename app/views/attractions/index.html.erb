@@ -3,6 +3,7 @@
  <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
 </head>
 <body>
+
   <div id = "header">
     <h1 id = 'title'> welcome to [untitled] </h1>
     <h4 id = 'slogan'> your portal to the unexplored </h4>
@@ -12,17 +13,21 @@
         <div id="favebar">
       <h5 id = "my_trip"><%= link_to "MY TRIP TO PROVIDENCE", :controller => "attractions", :action => "user_favorites" %></h5>
         <div class="panel">
+          <div id="wrap">
           <% current_user.attractions.each do |attraction| %>
             <h6 id='fave'><%= link_to attraction.title, attraction_path(attraction) %></h6>
-            <%= link_to image_tag(attraction.avatar.url), attraction_path(attraction), :class => "img_overlay" %>
-            <div class="wrap">
-            <div class="removefave">
+            <div id="img_overlay_remove">
+            <span class="thumb">
+            <%= link_to image_tag(attraction.avatar.url), attraction_path(attraction) %>
+          </span>
+            <span class="removefave">
             <%= link_to favorite_attraction_path(attraction, type: "remove"), method: :put do%>
                 remove from trip
             <% end %>
-            </div>
+            </span>
           </div>
           <% end %>
+          </div>
          </div>
       </div>
       </div>
@@ -74,13 +79,19 @@
           <div class="large-3 small-6 columns">
             <div id = "thumbnails">
             <div class="panel">
-               <h6><%= attraction.tagline %></h6>
-               <div class="thumb">
+               <h6 id="thumb_tag"><%= attraction.tagline %></h6>
+               <div id="img_overlay_add">
+               <span class="thumb">
                  <%= link_to image_tag(attraction.avatar.url), attraction_path(attraction) %>
-               </div>
-             <h6><%= attraction.title %></h6>
+               </span>
+               <!-- <span class="wrap"> -->
+            <span class="addfave">
              <%= link_to favorite_attraction_path(attraction, type: "add"), method: :put do %>
                 Add To Trip
+            </span>
+         <!--  </span> -->
+        </div>
+             <h6 id="thumb_title"><%= attraction.title %></h6>
               </div>
              <% end %>
             </div>
