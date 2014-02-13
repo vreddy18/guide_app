@@ -6,7 +6,7 @@ CityguideApp::Application.routes.draw do
   resources :attractions do
     put :favorite, on: :member
   end
-  get "static_pages/about"
+  get "static_pages/about" => "static_pages#about", as: "static_pages_about"
 
   
   # The priority is based upon order of creation: first created -> highest priority.
